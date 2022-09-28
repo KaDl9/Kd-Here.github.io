@@ -1,4 +1,6 @@
-
+body{
+  margin: 0px;
+}
 #de1{
     padding: 9px 19px 12px 30px;
   font-size: x-large;
@@ -8,8 +10,8 @@
   }
 
 #de{
-    margin-top: 13px;
-    padding-top:20px ;
+    margin-top: 35px;
+    padding:10px 0px;
     font-size: x-large;
     text-align: center;
     color: white;
