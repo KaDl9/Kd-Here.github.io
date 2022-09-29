@@ -1,5 +1,8 @@
 body{
   margin: 0px;
+  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 #de1{
     padding: 9px 19px 12px 30px;
@@ -10,10 +13,16 @@ body{
   }
 
 #de{
-    margin-top: 35px;
+  margin-top: auto;
     padding:10px 0px;
     font-size: x-large;
     text-align: center;
     color: white;
     background-color: black;
   }
+
+  
+.swiper-slide img{
+  width: auto;
+  height: 400px;
+}
