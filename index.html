@@ -586,7 +586,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p><i> Interested in working together? Fill out the form below with some info about your projects and I will get back to you as soon as I can. Please allow a couple days for me to respond.</i></p>
         </div>
 
         <div class="row" data-aos="fade-in">
@@ -596,19 +596,19 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>16/21 Mumbai, MH </p>
+                <p><b>16/21 Mumbai, MH </b></p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>vithaldev33@gmail.com</p>
+                <p><b>vithaldev33@gmail.com</b></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+91 9987572499</p>
+                <p><b>+91 9987572499</b></p>
               </div>
 
               <iframe src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Mumbai%20Mulund%20West+(Location)&amp;ie=UTF8&amp;t=k&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" style="border:0; width: 100%; height: 290px;" ></iframe>
@@ -617,32 +617,42 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="mailto:kunaldongre9899@gmail.com" method="post" role="form" autocomplete="off" class="php-email-form">
+            <form action="" name="NameForm" method="post" role="form" autocomplete="" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
+                  <label for="name"><b>Your Name</b></label>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                  <label for="name"><b>  Your Email</b></label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
+                <label for="name"><b>Subject</b></label>
+                <input type="text" class="form-control" name="number" id="subject" required>
               </div>
               <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <label for="name"><b>Message</b></label>
+                <textarea class="form-control" name="Message" rows="10" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+            </button>  
+
+              <div class="text-center"><input style="outline: none; color: white; background: #149ddd"; value="Send Message" name="submit" type="submit"></div>
             </form>
+            <script>
+              const scriptURL = 'https://script.google.com/macros/s/AKfycbz1MttA81GQWjXQP7EN_sDOx3dduFOeQMX1LbX7-ak7IwTwc8l_8nBR3v1OsFVlZxyUSQ/exec'
+              const form = document.forms['NameForm']
+            
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("Thank you! your form is submitted successfully." ))
+              .then(() => {  window.location.reload(); })
+              .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+      
           </div>
 
         </div>
